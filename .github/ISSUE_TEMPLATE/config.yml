@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Download / documentation
+    url: https://github.com/WBlackTL/ZhanchengSync
+    about: Read the README before opening an issue.

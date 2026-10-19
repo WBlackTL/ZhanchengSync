@@ -1,0 +1,55 @@
+name: Bug report
+description: Report a PackSync / resource sync issue
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not paste tokens, passwords or private server addresses.
+  - type: input
+    id: minecraft
+    attributes:
+      label: Minecraft / Fabric versions
+      placeholder: "1.20.1 / Fabric Loader 0.16.14 / Fabric API 0.92.6"
+    validations:
+      required: true
+  - type: input
+    id: packsync
+    attributes:
+      label: PackSync version
+      placeholder: "1.0.0"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Join the server
+        2. ...
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: Attach or paste the relevant client/server log lines.
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: config
+    attributes:
+      label: Relevant configuration
+      description: Remove URLs containing tokens or private information.
+      render: json
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: I am using the official build from this repository
+          required: true
+        - label: I have removed secrets from the logs/config
+          required: true
